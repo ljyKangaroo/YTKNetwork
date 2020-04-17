@@ -231,7 +231,10 @@
                 break;
         }
     }
-
+    //log info
+    if ([request.interceptor respondsToSelector:@selector(logDebugInfoWithRequest:)]){
+        [request.interceptor logDebugInfoWithRequest:request.requestPlaintextArgument];
+    }
     // Retain request
     YTKLog(@"Add request: %@", NSStringFromClass([request class]));
     [self addRequestToRecord:request];
@@ -284,6 +287,10 @@
     id validator = [request jsonValidator];
     if (json && validator) {
         result = [YTKNetworkUtils validateJSON:json withValidator:validator];
+        // 业务检查
+        if ([request.interceptor respondsToSelector:@selector(businessValidator)]) {
+            result = [request.interceptor businessValidator];
+        }
         if (!result) {
             if (error) {
                 *error = [NSError errorWithDomain:YTKRequestValidationErrorDomain code:YTKRequestValidationErrorInvalidJSONFormat userInfo:@{NSLocalizedDescriptionKey:@"Invalid JSON format"}];
@@ -333,6 +340,11 @@
                 request.responseObject = [self.xmlParserResponseSerialzier responseObjectForResponse:task.response data:request.responseData error:&serializationError];
                 break;
         }
+    }
+    //log info
+    if ([request.interceptor respondsToSelector:@selector(logDebugInfoWithResponse:)] &&
+        request.responseSerializerType == YTKResponseSerializerTypeJSON) {
+        [request.interceptor logDebugInfoWithResponse:request.responsePlaintextObject];
     }
     if (error) {
         succeed = NO;

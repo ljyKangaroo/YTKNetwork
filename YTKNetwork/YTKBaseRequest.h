@@ -120,6 +120,25 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 @end
 
+/// YTKBaseRequest Interceptor
+    
+@protocol YTKBaseRequestInterceptor <NSObject>
+
+@required
+    
+- (YTKRequestMethod)requestMethod;
+
+@optional
+    
+///bussniess Validator
+-(BOOL)businessValidator;
+/// log Validator
+- (void)logDebugInfoWithRequest:(id)deCodeData;
+- (void)logDebugInfoWithResponse:(id)deCodeData;
+
+@end
+
+
 ///  YTKBaseRequest is the abstract class of network request. It provides many options
 ///  for constructing request. It's the base class of `YTKRequest`.
 @interface YTKBaseRequest : NSObject
@@ -223,6 +242,9 @@ typedef void(^YTKRequestCompletionBlock)(__kindof YTKBaseRequest *request);
 
 ///  The priority of the request. Effective only on iOS 8+. Default is `YTKRequestPriorityDefault`.
 @property (nonatomic) YTKRequestPriority requestPriority;
+
+@property (nonatomic, weak) id<YTKBaseRequestInterceptor> interceptor;
+
 
 ///  Set completion callbacks
 - (void)setCompletionBlockWithSuccess:(nullable YTKRequestCompletionBlock)success

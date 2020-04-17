@@ -39,7 +39,7 @@
     #import <YTKNetwork/YTKChainRequest.h>
     #import <YTKNetwork/YTKChainRequestAgent.h>
     #import <YTKNetwork/YTKNetworkConfig.h>
-
+    #import <YTKNetwork/YTKBaseRequest+YTKLog.h>
 #else
 
     #import "YTKRequest.h"
@@ -50,6 +50,7 @@
     #import "YTKChainRequest.h"
     #import "YTKChainRequestAgent.h"
     #import "YTKNetworkConfig.h"
+    #import "YTKBaseRequest+YTKLog.h"
 
 #endif /* __has_include */
 

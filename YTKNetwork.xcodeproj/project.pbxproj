@@ -156,6 +156,8 @@
 		2DF836161DA7CA190076B1EB /* NSString+YTKUrlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF836131DA7C7FB0076B1EB /* NSString+YTKUrlUtils.m */; };
 		2DF836171DA7CA1B0076B1EB /* NSString+YTKUrlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF836131DA7C7FB0076B1EB /* NSString+YTKUrlUtils.m */; };
 		2DF836181DA7CA1B0076B1EB /* NSString+YTKUrlUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DF836131DA7C7FB0076B1EB /* NSString+YTKUrlUtils.m */; };
+		4991382D244980C500609944 /* YTKBaseRequest+YTKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4991382B244980C500609944 /* YTKBaseRequest+YTKLog.h */; };
+		4991382E244980C500609944 /* YTKBaseRequest+YTKLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4991382C244980C500609944 /* YTKBaseRequest+YTKLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,6 +286,8 @@
 		2DDCF9FA1DA7B73B00F5793B /* YTKXMLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YTKXMLRequest.m; path = Requests/YTKXMLRequest.m; sourceTree = "<group>"; };
 		2DF836121DA7C7FB0076B1EB /* NSString+YTKUrlUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+YTKUrlUtils.h"; path = "Utils/NSString+YTKUrlUtils.h"; sourceTree = "<group>"; };
 		2DF836131DA7C7FB0076B1EB /* NSString+YTKUrlUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+YTKUrlUtils.m"; path = "Utils/NSString+YTKUrlUtils.m"; sourceTree = "<group>"; };
+		4991382B244980C500609944 /* YTKBaseRequest+YTKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKBaseRequest+YTKLog.h"; sourceTree = "<group>"; };
+		4991382C244980C500609944 /* YTKBaseRequest+YTKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKBaseRequest+YTKLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +420,8 @@
 				2D244E331D4ED7910031202D /* YTKNetworkPrivate.m */,
 				2D244E341D4ED7910031202D /* YTKRequest.h */,
 				2D244E351D4ED7910031202D /* YTKRequest.m */,
+				4991382B244980C500609944 /* YTKBaseRequest+YTKLog.h */,
+				4991382C244980C500609944 /* YTKBaseRequest+YTKLog.m */,
 			);
 			name = YTKNetwork;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				2D244E401D4ED7910031202D /* YTKNetworkAgent.h in Headers */,
 				2D244E0D1D4ED6470031202D /* YTKNetwork.h in Headers */,
 				2D244E441D4ED7910031202D /* YTKNetworkPrivate.h in Headers */,
+				4991382D244980C500609944 /* YTKBaseRequest+YTKLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,6 +738,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 2D244DFF1D4ED6460031202D;
@@ -815,6 +823,7 @@
 				2D244E391D4ED7910031202D /* YTKBatchRequest.m in Sources */,
 				2D244E3B1D4ED7910031202D /* YTKBatchRequestAgent.m in Sources */,
 				2D244E3F1D4ED7910031202D /* YTKChainRequestAgent.m in Sources */,
+				4991382E244980C500609944 /* YTKBaseRequest+YTKLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
