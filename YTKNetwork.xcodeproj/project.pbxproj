@@ -286,8 +286,8 @@
 		2DDCF9FA1DA7B73B00F5793B /* YTKXMLRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YTKXMLRequest.m; path = Requests/YTKXMLRequest.m; sourceTree = "<group>"; };
 		2DF836121DA7C7FB0076B1EB /* NSString+YTKUrlUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+YTKUrlUtils.h"; path = "Utils/NSString+YTKUrlUtils.h"; sourceTree = "<group>"; };
 		2DF836131DA7C7FB0076B1EB /* NSString+YTKUrlUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+YTKUrlUtils.m"; path = "Utils/NSString+YTKUrlUtils.m"; sourceTree = "<group>"; };
-		4991382B244980C500609944 /* YTKBaseRequest+YTKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YTKBaseRequest+YTKLog.h"; sourceTree = "<group>"; };
-		4991382C244980C500609944 /* YTKBaseRequest+YTKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YTKBaseRequest+YTKLog.m"; sourceTree = "<group>"; };
+		4991382B244980C500609944 /* YTKBaseRequest+YTKLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "YTKBaseRequest+YTKLog.h"; path = "YTKNetwork/YTKBaseRequest+YTKLog.h"; sourceTree = "<group>"; };
+		4991382C244980C500609944 /* YTKBaseRequest+YTKLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "YTKBaseRequest+YTKLog.m"; path = "YTKNetwork/YTKBaseRequest+YTKLog.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
