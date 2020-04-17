@@ -233,7 +233,7 @@
     }
     //log info
     if ([request.interceptor respondsToSelector:@selector(logDebugInfoWithRequest:)]){
-        [request.interceptor logDebugInfoWithRequest:request.requestPlaintextArgument];
+        [request.interceptor logDebugInfoWithRequest:request.requestArgument];
     }
     // Retain request
     YTKLog(@"Add request: %@", NSStringFromClass([request class]));
@@ -344,7 +344,7 @@
     //log info
     if ([request.interceptor respondsToSelector:@selector(logDebugInfoWithResponse:)] &&
         request.responseSerializerType == YTKResponseSerializerTypeJSON) {
-        [request.interceptor logDebugInfoWithResponse:request.responsePlaintextObject];
+        [request.interceptor logDebugInfoWithResponse:request.responseObject];
     }
     if (error) {
         succeed = NO;
