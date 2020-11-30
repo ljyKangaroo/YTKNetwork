@@ -57,10 +57,10 @@ void (^YTK_Log)(NSString *logString);
         [logString appendFormat:@"Error Localized Failure Reason:\t\t\t%@\n", self.error.localizedFailureReason];
         [logString appendFormat:@"Error Localized Recovery Suggestion:\t%@\n\n", self.error.localizedRecoverySuggestion];
     }
-    [logString appendString:@"\n---------------  Related Request Content  --------------\n"];
+//    [logString appendString:@"\n---------------  Related Request Content  --------------\n"];
 
     //    [logString appendURLRequest:request];
-    [self appendURLRequest:logString];
+//    [self appendURLRequest:logString];
 
     [logString appendFormat:@"\n\n==============================================================\n=                        Response End                        =\n==============================================================\n\n\n\n"];
 
@@ -120,7 +120,7 @@ void (^YTK_Log)(NSString *logString);
 - (void)appendURLRequest:(NSMutableString *)logString {
     [logString appendFormat:@"\n\nHTTP URL:\n\t%@", self.currentRequest.URL];
     [logString appendFormat:@"\n\nHTTP Header:\n%@", self.currentRequest.allHTTPHeaderFields ? self.currentRequest.allHTTPHeaderFields : @"\t\t\t\t\tN/A"];
-    [logString appendFormat:@"\n\nHTTP Body:\n\t%@", [[[NSString alloc] initWithData:self.responseData encoding:NSUTF8StringEncoding] ytk_defaultValue:@"\t\t\t\tN/A"]];
+    [logString appendFormat:@"\n\nHTTP Body:\n\t%@", [[[NSString alloc] initWithData:self.currentRequest.HTTPBody encoding:NSUTF8StringEncoding] ytk_defaultValue:@"\t\t\t\tN/A"]];
 }
 
 @end
