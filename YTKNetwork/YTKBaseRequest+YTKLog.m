@@ -57,9 +57,10 @@ void (^YTK_Log)(NSString *logString);
         [logString appendFormat:@"Error Localized Failure Reason:\t\t\t%@\n", self.error.localizedFailureReason];
         [logString appendFormat:@"Error Localized Recovery Suggestion:\t%@\n\n", self.error.localizedRecoverySuggestion];
     }
-//    [logString appendString:@"\n---------------  Related Request Content  --------------\n"];
 
-    //    [logString appendURLRequest:request];
+    [logString appendString:@"\n---------------  Related Request Content  --------------\n"];
+    [logString appendFormat:@"\n\nHTTP URL:\n\t%@", self.currentRequest.URL];
+//    [logString appendURLRequest:request];
 //    [self appendURLRequest:logString];
 
     [logString appendFormat:@"\n\n==============================================================\n=                        Response End                        =\n==============================================================\n\n\n\n"];
